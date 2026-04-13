@@ -1,370 +1,397 @@
 <!DOCTYPE html>
-<html lang="es">
+<html  >
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salón Galaxia | Belleza Estelar en Santiago</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --negro: #0a0a0a;
-            --blanco: #ffffff;
-            --turquesa: #00ced1;
-            --turquesa-dark: #008b8b;
-            --gris-oscuro: #1a1a1a;
-        }
+  <!-- Site made with Mobirise Website Builder v5.9.13, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.9.13, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo-galaxia-2023-mesa-de-trabajo-4-copia-3.svg" type="image/x-icon">
+  <meta name="description" content="¿Buscas una peluquería cerca de ti? Somos expertos en alisado permanente Bio Ionic, balayage, peinados para eventos, camuflaje de canas para hombres, bótox capilar y venta de productos veganos, ubicados en Santiago Centro. Manicure, depilación, ¡Reserva online!
+¡Haz nuestro test de look gratuito y encuentra tu estilo ideal">
+  
+  
+  <title>Peluquería y Estética en Santiago Centro | Salón Galaxia</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/parallax/jarallax.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=bTwr4h"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=bTwr4h" type="text/css">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--negro);
-            color: var(--blanco);
-            line-height: 1.6;
-        }
-
-        /* --- Navegación --- */
-        nav {
-            background-color: rgba(10, 10, 10, 0.98);
-            height: 80px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 5%;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #222;
-        }
-
-        .logo {
-            font-weight: 700;
-            font-size: 1.4rem;
-            color: var(--turquesa);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links li a {
-            color: var(--blanco);
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 0.85rem;
-            font-weight: 400;
-            text-transform: uppercase;
-            transition: 0.3s;
-        }
-
-        .nav-links li a:hover {
-            color: var(--turquesa);
-        }
-
-        /* Botón CTA en Menu */
-        .btn-header {
-            background-color: var(--turquesa);
-            color: var(--negro) !important;
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-weight: 700 !important;
-            margin-left: 20px !important;
-        }
-
-        /* Menu Hamburguesa */
-        .burger {
-            display: none;
-            cursor: pointer;
-            color: var(--turquesa);
-            font-size: 1.5rem;
-        }
-
-        /* --- Hero Section --- */
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.7)), 
-                        url('https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            padding: 0 5%;
-        }
-
-        .hero h1 {
-            font-size: clamp(2rem, 8vw, 4rem);
-            margin-bottom: 1rem;
-            letter-spacing: 8px;
-            text-transform: uppercase;
-        }
-
-        .hero span { color: var(--turquesa); }
-
-        .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 2.5rem;
-            max-width: 700px;
-            font-weight: 300;
-        }
-
-        /* --- Servicios --- */
-        .section-padding { padding: 80px 10%; }
-
-        .title-center {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .title-center h2 {
-            font-size: 2.2rem;
-            color: var(--turquesa);
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .card {
-            background: var(--gris-oscuro);
-            padding: 40px;
-            border-radius: 5px;
-            text-align: center;
-            border: 1px solid #333;
-            transition: 0.4s;
-        }
-
-        .card:hover {
-            border-color: var(--turquesa);
-            transform: translateY(-10px);
-        }
-
-        .card i {
-            font-size: 2.5rem;
-            color: var(--turquesa);
-            margin-bottom: 20px;
-        }
-
-        .card h3 { margin-bottom: 15px; text-transform: uppercase; font-size: 1.1rem; }
-
-        /* --- Agenda (Calendar) --- */
-        .calendar-box {
-            background: #111;
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid var(--turquesa);
-        }
-
-        /* --- WhatsApp Float --- */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background-color: #25d366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            z-index: 3000;
-            text-decoration: none;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-        }
-
-        /* --- Footer --- */
-        footer {
-            background: #000;
-            padding: 60px 10% 20px;
-            border-top: 1px solid #222;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-content h4 { color: var(--turquesa); margin-bottom: 20px; }
-        .footer-content p { font-size: 0.9rem; color: #ccc; margin-bottom: 8px; }
-
-        /* --- RESPONSIVE MOBILE --- */
-        @media screen and (max-width: 992px) {
-            .nav-links {
-                position: absolute;
-                right: 0px;
-                height: 92vh;
-                top: 80px;
-                background-color: var(--negro);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-                transform: translateX(100%);
-                transition: transform 0.5s ease-in;
-                padding-top: 50px;
-            }
-
-            .nav-links li { opacity: 0; margin-bottom: 30px; }
-            
-            .nav-links li a { font-size: 1.2rem; }
-
-            .burger { display: block; }
-
-            .nav-active { transform: translateX(0%); }
-
-            .btn-header { margin-left: 0 !important; margin-top: 10px; }
-        }
-
-        @keyframes navLinkFade {
-            from { opacity: 0; transform: translateX(50px); }
-            to { opacity: 1; transform: translateX(0px); }
-        }
-    </style>
+  
+  
+  
 </head>
 <body>
+  
+  <section data-bs-version="5.1" class="menu menu3 cid-vcV7arvGO5" once="menu" id="menu03-0">
+	
 
-    <nav>
-        <div class="logo">Salón Galaxia</div>
-        <ul class="nav-links">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#agendar">Agendar</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="https://wa.me/56998105491" class="btn-header">RESERVAR CITA</a></li>
-        </ul>
-        <div class="burger">
-            <i class="fas fa-bars"></i>
-        </div>
-    </nav>
+	<nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+		<div class="container">
+			<div class="navbar-brand">
+				<span class="navbar-logo">
+					<a href="index.html">
+						<img src="assets/images/logo-galaxia-2023-4-404x145.png" alt="Logo de Salón Galaxia, Peluquería Galaxia, peluqería tendencia en Santiago Centro especialista en alisado permanente Bio Ionic, balayage y estética integral cerca de mi ubicación." style="height: 3.8rem;">
+					</a>
+				</span>
+				
+			</div>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<div class="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item">
+						<a class="nav-link link text-white text-primary display-4" href="index.html">.<span class="mobi-mbri mobi-mbri-home mbr-iconfont mbr-iconfont-btn"></span></a>
+					</li><li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="testlook.html">Test Look</a></li>
+					<li class="nav-item">
+						<a class="nav-link link show text-white text-primary display-4" href="nosotros.html" aria-expanded="false">Nosotros</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link link text-white text-primary display-4" href="galeria.html">Trabajos</a>
+					</li><li class="nav-item"><a class="nav-link link text-white display-4" href="index.html#tabs1-7">Servicios</a></li></ul>
+				<div class="icons-menu">
+					<a class="iconfont-wrapper" href="https://www.instagram.com/salongalaxia/" target="_blank">
+						<span class="p-2 mbr-iconfont socicon-instagram socicon"></span>
+					</a>
+					
+					
+					
+				</div>
+				
+			</div>
+		</div>
+	</nav>
+</section>
 
-    <section id="inicio" class="hero">
-        <h1>SALÓN <span>GALAXIA</span></h1>
-        <p>Alisados Bio Ionic • Coloristas Expertos • Tratamientos Premium. Transforma tu cabello en un espacio minimalista en el corazón de Santiago.</p>
-        <a href="https://wa.me/56998105491" class="cta-button" style="background:var(--turquesa); color:var(--negro); padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 700;">AGENDAR POR WHATSAPP</a>
-    </section>
+<section data-bs-version="5.1" class="header09 startm5 cid-vcVlDHA5f6 mbr-parallax-background" id="header09-1">	
+    
+	<div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(0, 0, 0);"></div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="content-wrap col-12 col-md-7">
+				<h1 class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1"><strong>Elevamos tu look a las estrellas</strong></h1>
+				
+				<p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7">
+					Tu Salón de belleza y Peluquería en Santiago Centro</p>
+				<div class="mbr-section-btn"><a class="btn btn-warning display-7" href="testlook.html">Haz el test, descubre tu look</a> <a class="btn btn-primary display-7" href="index.html#article05-f">Alisado Bio Ionic</a> <a class="btn btn-warning-outline display-7" href="index.html#tabs1-7">Servicios</a></div>
+			</div>
+		</div>
+	</div>
+</section>
 
-    <section id="servicios" class="section-padding">
-        <div class="title-center">
-            <h2>Nuestra Expertise</h2>
-        </div>
-        <div class="services-grid">
-            <div class="card">
-                <i class="fas fa-sparkles"></i>
-                <h3>Alisado Bio Ionic</h3>
-                <p>Hidratación profunda y liso natural permanente.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-eye"></i>
-                <h3>Coloristas</h3>
-                <p>Especialistas en balayage y cambios de look radicales.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-hand-holding-heart"></i>
-                <h3>Tratamientos</h3>
-                <p>Cuidado intensivo para cabellos dañados o procesados.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-scissors"></i>
-                <h3>Corte & Brushing</h3>
-                <p>Estilo y volumen con acabados profesionales.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="agendar" class="section-padding" style="background:#050505;">
-        <div class="title-center">
-            <h2>Agenda Online</h2>
-            <p>Visualiza nuestras horas disponibles en Google Calendar</p>
-        </div>
-        <div class="calendar-box">
-            <iframe src="https://calendar.google.com/calendar/appointments/schedules/TU_LINK_AQUI?gv=true" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
-        </div>
-    </section>
-
-    <a href="https://wa.me/56998105491" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <footer>
-        <div class="footer-content">
-            <div>
-                <h4>VISÍTANOS</h4>
-                <p><i class="fas fa-map-marker-alt" style="color:var(--turquesa)"></i> Huérfanos 1160, Local 7</p>
-                <p>Santiago Centro, Chile</p>
-            </div>
-            <div>
-                <h4>CONTACTO</h4>
-                <p><i class="fas fa-phone" style="color:var(--turquesa)"></i> +56 9 9810 5491</p>
-                <p><i class="fas fa-envelope" style="color:var(--turquesa)"></i> contacto@salongalaxia.cl</p>
-            </div>
-            <div>
-                <h4>SÍGUENOS</h4>
-                <p>Lunes a Sábado: 10:00 - 19:00</p>
+<section data-bs-version="5.1" class="content11 cid-vcVA4JP2u3" id="content11-8">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                <div class="mbr-section-btn align-center"><a class="btn btn-success-outline display-4" href="https://wa.me/56977466662?text=Hola%20José,%20ví%20el%20la%20página%20web%20y%20quiero%20agendar%20una%20hora%20para%20evaluar%20mi%20cabello%20y%20ver%20como%20podemos%20mejorarlo">Quiero agendar evaluación de mi cabello GRATIS!&nbsp;</a></div>
             </div>
         </div>
-        <div style="text-align:center; font-size: 0.8rem; border-top: 1px solid #111; padding-top: 20px; color: #555;">
-            &copy; 2026 Salón Galaxia. Diseño Minimalista & Profesional.
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="tabs content18 cid-vcVzMQUVUn" id="tabs1-7">
+
+    
+
+    
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center mb-5">
+            <div class="col-12 content-head">
+                <h3 class="mbr-section-title mb-0 mbr-fonts-style display-2">
+                    <strong>Servicios</strong></h3>
+                <h4 class="mbr-section-subtitle mb-0 mt-4 mbr-fonts-style display-7"><strong>PARA DAMA Y HOMBRE</strong></h4>
+            </div>
         </div>
-    </footer>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="item-wrapper">
+                    <ul class="nav nav-tabs mb-4" role="tablist">
+                        <li class="nav-item first mbr-fonts-style"><a class="nav-link mbr-fonts-style show active display-7" role="tab" data-toggle="tab" data-bs-toggle="tab" href="#tabs1-7_tab0" aria-selected="true"><strong>COLOR</strong></a></li>
+                        <li class="nav-item"><a class="nav-link mbr-fonts-style active display-7" role="tab" data-toggle="tab" data-bs-toggle="tab" href="#tabs1-7_tab1" aria-selected="true"><strong>CORTE</strong></a></li>
+                        <li class="nav-item"><a class="nav-link mbr-fonts-style display-7" role="tab" data-toggle="tab" data-bs-toggle="tab" href="#tabs1-7_tab2" aria-selected="false"><strong>ALISADO</strong></a></li>
+                        <li class="nav-item"><a class="nav-link mbr-fonts-style display-7" role="tab" data-toggle="tab" data-bs-toggle="tab" href="#tabs1-7_tab3" aria-selected="false"><strong>PEINADO</strong></a></li>
+                        <li class="nav-item"><a class="nav-link mbr-fonts-style active display-7" role="tab" data-toggle="tab" data-bs-toggle="tab" href="#tabs1-7_tab4" aria-selected="true"><strong>DEPILACIÓN</strong></a></li>
+                        
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab1" class="tab-pane in active" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="mbr-text mbr-fonts-style display-7"><strong>Color Completo:</strong> Cobertura perfecta y uniforme, con o sin decoloración, según el diagnóstico de tu fibra.<br><br><strong>Iluminación Babylights:</strong> Micro-reflejos delicados para un efecto de brillo natural y multidimensional.<br><br><strong>Balayage:</strong> Degradados suaves y personalizados que aportan profundidad y movimiento.<br><br><strong>Baños de Color:</strong> Reactivación de tono y brillo extremo para un acabado radiante y saludable.<br><br><strong>Técnicas de Iluminación Avanzadas:</strong> Diseño de luz a medida para resaltar tus facciones.<br><br>y mucho mas...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab2" class="tab-pane" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="mbr-text mbr-fonts-style display-7"><strong>Te asesoramos en tu corte:</strong><br><br><strong>Corte</strong>: cortes con diseños personalizados que respetan la caída natural y textura de tu cabello.<br><br><strong>Cambio de Look:</strong> Asesoramiento experto para transformar tu imagen con precisión técnica.<br><br><strong>Mantenimiento de Puntas:</strong> Corte técnico para sanar la fibra sin perder el largo deseado.<br><br>y mocho más...<br></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab3" class="tab-pane" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="mbr-text mbr-fonts-style display-7">
+                                        Especialistas en técnicas de tendencia que priorizan la salud de tu cabello.<br><br>Utilizamos una selección de productos de la más alta calidad que se ajustan a las necesidades de tu cabello, logrando un resultado <strong>sedoso, brillante y perfecto.</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab4" class="tab-pane" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="mbr-text mbr-fonts-style display-7"><strong>
+                                        Técnicas de vangardia para eventos especiales.</strong><br><strong><br></strong>Peinados para galas, matrimonios, fiestas y Red Carpet y más.&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab5" class="tab-pane" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="mbr-text mbr-fonts-style display-7"><strong>Suavidad absoluta con estándares de higiene clínica.</strong><br><br><strong>Depilación Facial y Corporal:</strong> Técnicas precisas para tu piel tersa y libre de vello.<br><br>Garantizamos máxima privacidad e higiene.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <script>
-        const navSlide = () => {
-            const burger = document.querySelector('.burger');
-            const nav = document.querySelector('.nav-links');
-            const navLinks = document.querySelectorAll('.nav-links li');
+<section data-bs-version="5.1" class="start article05 cid-vduD8hwvJC" id="article05-24">
+  
 
-            burger.addEventListener('click', () => {
-                // Toggle Nav
-                nav.classList.toggle('nav-active');
+  
+  
 
-                // Animate Links
-                navLinks.forEach((link, index) => {
-                    if (link.style.animation) {
-                        link.style.animation = '';
-                    } else {
-                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-                    }
-                });
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12">
+        <div class="card-wrapper">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-5 image-wrapper">
+              <a href="testlook.html"><img class="w-100" src="assets/images/gemini-generated-image-6nlqdu6nlqdu6nlq-848x1241.png" alt="Test de look virtual para cabello y asesoría de imagen en Salón Galaxia Santiago"></a>
+            </div>
+            <div class="col-12 col-lg col-md-12">
+              <div class="text-wrapper align-left">
+                <h1 class="mbr-section-title mbr-fonts-style mb-4 display-2">
+                  <strong>¡Haz el test de Look ahora!</strong></h1>
+                <p class="mbr-text mbr-fonts-style mb-4 display-7">¿No sabes qué cambio te favorece? Con nuestro Test de Look 2026, recibe una guía personalizada según tu tipo de cabello. Descubre si te queda mejor un balayage, un alisado o un corte tendencia en nuestra Peluquería Salón Galaxia.</p>
+                <div class="mbr-section-btn mt-3"><a class="btn btn-lg btn-warning display-7" href="testlook.html">Comenzar Test</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-                // Burger Animation
-                burger.classList.toggle('toggle');
-            });
-            
-            // Cerrar menu al clickear un link
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    nav.classList.remove('nav-active');
-                    navLinks.forEach(l => l.style.animation = '');
-                });
-            });
-        }
+<section data-bs-version="5.1" class="start article05 cid-vcWgQ91Ovx" id="article05-f">
+  
 
-        navSlide();
-    </script>
+  
+  
+
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12">
+        <div class="card-wrapper">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-5 image-wrapper">
+              <img class="w-100" src="assets/images/gemini-generated-image-fd697zfd697zfd69-1-1036x565.png" alt="Resultado de alisado Bio Ionic permanente sin formol en Salón Galaxia Santiago Centro">
+            </div>
+            <div class="col-12 col-lg col-md-12">
+              <div class="text-wrapper align-left">
+                <h1 class="mbr-section-title mbr-fonts-style mb-4 display-2">
+                  <strong>Alisado</strong><br><strong>Bio Ionic</strong></h1>
+                <p class="mbr-text mbr-fonts-style mb-4 display-7"><strong>SIN FORMOL</strong><br>Sistema de alisado&nbsp;&nbsp;<strong>PERMANENTE&nbsp;&nbsp;</strong>basado en una tecnología de iones naturales y minerales que busca transformar la estructura del cabello sin dañarlo, a diferencia de alisados agresivos, el método Bio Ionic sella la humedad y acondiciona el cabello durante el proceso, dejándolo con un brillo casi líquido y peso perfecto. Visítanos en Santiago Centro para tu evaluación profesional.<br>
+                </p>
+                <div class="mbr-section-btn mt-3"><a class="btn btn-lg btn-warning display-7" href="https://wa.me/56977466662?text=Hola%20José!%20Ví%20su%20página%20web%20y%20me%20intersa%20realizarme%20un%20alisado%20Bio%20Ionic,%20me%20gustaría%20agendar%20una%20evaluación%20de%20mi%20cabello." target="_blank">Agendar evaluación Gratis</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-bs-version="5.1" class="features024 cid-vd0i16gSsA mbr-parallax-background" id="features024-y">
+  
+
+  
+  <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(0, 0, 0);"></div>
+
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12">
+        <div class="card-wrapper">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-6 image-wrapper">
+              <img class="w-100" src="assets/images/mbr-1-1256x837.jpeg" alt="Corte de pelo hombre, Barbería, Barbershop y camuflaje de canas en Santiago Centro - Salón Galaxia">
+            </div>
+            <div class="col-12 col-lg col-md-12">
+              <div class="text-wrapper align-left">
+                <h5 class="mbr-section-title mbr-fonts-style mb-4 display-2"><strong>Estética Masculina en Santiago Centro</strong></h5>
+                
+                <p class="mbr-text mbr-fonts-style mb-4 display-7">Corte de cabello masculino<br><br>Perfilado de Barba<br><br>Camuflaje de canas (efecto natural)<br><br>Color fantasía y Platinados<br><br>Especialistas en looks modernos y barbería clásica.<br></p>
+                <div class="mbr-section-btn mt-3"><a class="btn btn-lg btn-warning display-7" href="https://wa.me/56977466662?text=Hola%20José!%20Quisiera%20agendar%20una%20hora%20para%20Caballero%20para%20realizarme%2056977466662?text=Hola%20José!%20Quisiera%20agendar%20una%20hora%20para%20Caballero%20para%20realizarme%(Corte/Barba/Canas/Otro)" target="_blank">Agendar hora</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-bs-version="5.1" class="carousel slide cid-vd0HUO9HLn" data-interval="false" data-bs-interval="false" id="slider1-18">
+
+    
+
+    <div class="full-screen"><div class="mbr-slider slide carousel" data-keyboard="false" data-bs-keyboard="false" data-ride="carousel" data-bs-ride="carousel" data-interval="6000" data-bs-interval="6000" data-bs-pause="true" data-pause="true"><ol class="carousel-indicators"><li data-app-prevent-settings="" data-target="#slider1-18" data-bs-target="#slider1-18" data-slide-to="0" data-bs-slide-to="0"></li><li data-app-prevent-settings="" data-target="#slider1-18" data-bs-target="#slider1-18" class=" active" data-slide-to="1" data-bs-slide-to="1"></li></ol><div class="carousel-inner" role="listbox"><div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/assets-web-salon-galaxia-2-1980x2652.png);"><div class="container container-slide"><div class="image_wrapper"><div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(0, 7, 24);"></div><img src="assets/images/assets-web-salon-galaxia-2-1980x2652.png" alt="" title=""><div class="carousel-caption justify-content-center"><div class="col-10 align-left"><h2 class="mbr-fonts-style display-2"><strong>MIRA NUESTROS TRABAJOS</strong></h2><div class="mbr-section-btn" buttons="0"><a class="btn display-4 btn-warning" href="galeria.html">VER MÁS</a> </div></div></div></div></div></div><div class="carousel-item slider-fullscreen-image active" data-bg-video-slide="false" style="background-image: url(assets/images/assets-web-salon-galaxia-12-1920x2572.png);"><div class="container container-slide"><div class="image_wrapper"><div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(0, 7, 24);"></div><img src="assets/images/assets-web-salon-galaxia-12-1920x2572.png" alt="" title=""><div class="carousel-caption justify-content-center"><div class="col-10 align-left"><h2 class="mbr-fonts-style display-2"><strong>MIRA NUESTROS TRABAJOS</strong></h2><div class="mbr-section-btn" buttons="0"><a class="btn display-4 btn-warning" href="galeria.html">VER MAS</a> </div></div></div></div></div></div></div><a data-app-prevent-settings="" class="carousel-control carousel-control-prev" role="button" data-slide="prev" data-bs-slide="prev" href="#slider1-18"><span aria-hidden="true" class="mbri-left mbr-iconfont"></span><span class="sr-only visually-hidden">Previous</span></a><a data-app-prevent-settings="" class="carousel-control carousel-control-next" role="button" data-slide="next" data-bs-slide="next" href="#slider1-18"><span aria-hidden="true" class="mbri-right mbr-iconfont"></span><span class="sr-only visually-hidden">Next</span></a></div></div>
+
+</section>
+
+<section data-bs-version="5.1" class="start article2 cid-vcVSqgkRJ2" id="article02-e">
+	
+
+	
+	
+
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 col-md-12 col-lg-6 image-wrapper">
+				<img class="w-100" src="assets/images/gemini-generated-image-3a3pxd3a3pxd3a3p-768x1376.png" alt="Estilista profesional Jose López, experto en alisado y colorista en Santiago Centro - Salón Galaxia">
+			</div>
+			<div class="col-12 col-md-12 col-lg">
+				<div class="text-wrapper align-left">
+					<h1 class="mbr-section-title mbr-fonts-style mb-4 display-2">
+						<strong>Estilista profesional</strong><br><strong>Jose López</strong></h1>
+					<p class="mbr-text align-left mbr-fonts-style mb-4 display-7">Décadas de trayectoria, renombrado profesional en el mundo de la peluquería. Como colorista profesional, experto en alisados, hair styling y peinados para galas, así como también destacado docente que ha formado a otros expertos, elevando los estándares del cuidado capilar.<br>
+<br>Su maestría técnica se refleja en su especialización en alisados de alta gama, siendo uno de los pocos profesionales nacionales con el dominio absoluto del tratamiento <strong>Bio Ionic</strong>.<br>
+<br><em><strong>La belleza nace de la salud</strong></em>; por ello, cada servicio inicia con una evaluación exhaustiva y un asesoramiento personalizado.</p>
+					<div class="mbr-section-btn align-left mt-3"><a class="btn btn-warning-outline display-7" href="https://wa.me/56977466662?text=Hola%20José,%20ví%20tu%20web%20y%20me%20gustaría%20agendar%20una%20hora%20y%20asesoría%20para%20mi%20cabello" target="_blank">Agendar con él</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section data-bs-version="5.1" class="contacts01 cid-vd0ok5XapE mbr-parallax-background" id="contacts01-11">
+    
+
+    
+    <div class="mbr-overlay" style="opacity: 0.9; background-color: rgb(0, 7, 24);">
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 content-head">
+                <div class="mbr-section-head mb-5">
+                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                        <strong>Reserva ahora</strong></h3>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="item features-without-image col-12 col-md-6 active">
+                <div class="item-wrapper">
+                    <div class="text-wrapper">
+                        <h6 class="card-title mbr-fonts-style mb-3 display-5">
+                            <strong>Teléfono</strong></h6>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            +<a href="tel:+56977466662" class="text-white text-primary">569 7746 6662</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item features-without-image col-12 col-md-6">
+                <div class="item-wrapper">
+                    <div class="text-wrapper">
+                        <h6 class="card-title mbr-fonts-style mb-3 display-5">
+                            <strong>Instagram</strong></h6>
+                        <p class="mbr-text mbr-fonts-style display-7"><a href="https://www.instagram.com/salongalaxia/" class="text-white" target="_blank">instagram.com/salongalaxia</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item features-without-image col-12 col-md-6">
+                <div class="item-wrapper">
+                    <div class="text-wrapper">
+                        <h6 class="card-title mbr-fonts-style mb-3 display-5"><strong>Dirección</strong></h6>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            <a href="https://maps.app.goo.gl/AgjPL5hmrvbKuthF9" class="text-white" target="_blank">Huérfanos 1160, Local 7, Santiago, Chile</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item features-without-image col-12 col-md-6">
+                <div class="item-wrapper">
+                    <div class="text-wrapper">
+                        <h6 class="card-title mbr-fonts-style mb-3 display-5">
+                            <strong>Horario</strong></h6>
+                        <p class="mbr-text mbr-fonts-style display-7"><strong>Lun - vie:<br></strong>10:00 hrs. - 19:00 hrs.<br><br><strong>Sab:<br></strong>10:00 hrs. - 15:00 hrs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="contacts03 cid-vdMSDWZ9m8" id="contacts03-2a">
+  
+
+  
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-4">
+        <div class="col-12 col-md-12">
+          <h5 class="mbr-section-title mbr-fonts-style mt-0 mb-4 display-2"><strong>Tu Peluquería Salón Galaxia cerca del Metro</strong></h5>
+          <h6 class="mbr-section-subtitle mbr-fonts-style mt-0 mb-4 display-7">Ubicados en el corazón de Santiago Centro, Salón Galaxia es la peluquería cerca de ti, ideal para quienes buscan un salón de belleza integral.<br><br>Encuéntranos a pasos de Metro Plaza de Armas y Metro Universidad de Chile.<br><br>Abierto de Lunes a Sábado - Agenda tu hora<br><br>Huérfanos 1160, local 7,&nbsp;Santiago, Región Metropolitana<br>8340420</h6>
+          
+        </div>
+      </div>
+      <div class="col-lg-8 side-features">
+        <div class="google-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.360395847201!2d-70.653103!3d-33.4399159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a43c2d7007%3A0x35068c3cf4671018!2sHu%C3%A9rfanos%201160%2C%20local%207%2C%208340420%20Santiago%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1773439513687!5m2!1ses-419!2scl" allowfullscreen=""></iframe></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-bs-version="5.1" class="footer4 cid-vd0odIPHtm mbr-reveal" once="footers" id="footer04-10">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="col-12">
+                <p class="mbr-text mb-0 mbr-fonts-style display-7">
+                    © Salón Galaxia - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </div>
+</section><section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;"><a href="https://mobiri.se/479503" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><p style="margin: 0;text-align: center;" class="display-7">&#8204;</p><a style="z-index:1" href="https://mobirise.com/offline-website-builder.html">Offline Website Maker</a></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/mbr-tabs/mbr-tabs.js"></script>  <script src="assets/vimeoplayer/player.js"></script>  <script src="assets/theme/js/script.js"></script>  <script src="assets/slidervideo/script.js"></script>  
+  
+  
 </body>
 </html>
-
-
