@@ -390,6 +390,71 @@
     </div>
 </section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/mbr-tabs/mbr-tabs.js"></script>  <script src="assets/vimeoplayer/player.js"></script>  <script src="assets/theme/js/script.js"></script>  <script src="assets/slidervideo/script.js"></script>  
   
-  
+<style>
+    /* Contenedor y Estilo del Botón */
+    .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 65px;
+        height: 65px;
+        background-color: #25D366;
+        color: #FFF !important;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        z-index: 10000;
+        
+        /* Efecto Neón */
+        box-shadow: 0 0 15px rgba(37, 211, 102, 0.7), 
+                    0 0 30px rgba(37, 211, 102, 0.4);
+        
+        /* Suavidad de transición */
+        transition: all 0.3s ease-in-out;
+        
+        /* Animación de Bamboleo */
+        animation: wobble-neon 3s infinite ease-in-out;
+    }
+
+    /* Hover: Intensifica el efecto al pasar el mouse */
+    .whatsapp-float:hover {
+        background-color: #20ba5a;
+        box-shadow: 0 0 25px rgba(37, 211, 102, 1), 
+                    0 0 50px rgba(37, 211, 102, 0.6);
+        transform: scale(1.1);
+        color: #fff !important;
+    }
+
+    /* Keyframes para el efecto de bamboleo (Wobble) */
+    @keyframes wobble-neon {
+        0%, 100% { transform: rotate(0deg); }
+        8%, 24% { transform: rotate(-12deg) scale(1.05); }
+        16%, 32% { transform: rotate(12deg) scale(1.05); }
+        40% { transform: rotate(0deg) scale(1); }
+    }
+
+    /* Ajuste para dispositivos móviles */
+    @media (max-width: 768px) {
+        .whatsapp-float {
+            bottom: 20px;
+            right: 20px;
+            width: 55px;
+            height: 55px;
+            font-size: 28px;
+        }
+    }
+</style>
+
+<a href="https://wa.me/56977466662?text=Hola%20José!%20Ví%20la%20página%20web%20de%20Salón%20Galaxia%20y%20quiero%20agendar%20una%20hora." 
+   class="whatsapp-float" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   title="Chatea con José López">
+    <i class="socicon-whatsapp socicon"></i>
+</a>  
 </body>
 </html>
