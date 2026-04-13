@@ -391,70 +391,135 @@
 </section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/mbr-tabs/mbr-tabs.js"></script>  <script src="assets/vimeoplayer/player.js"></script>  <script src="assets/theme/js/script.js"></script>  <script src="assets/slidervideo/script.js"></script>  
   
 <style>
-    /* Contenedor y Estilo del Botón */
-    .whatsapp-float {
+    /* Contenedor principal para manejar las ondas */
+    .whatsapp-pulse-wrapper {
         position: fixed;
         bottom: 30px;
         right: 30px;
+        z-index: 10000;
+        width: 65px;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Estilo Base del Botón (El círculo central) */
+    .whatsapp-pulse-btn {
         width: 65px;
         height: 65px;
         background-color: #25D366;
         color: #FFF !important;
-        border-radius: 50px;
+        border-radius: 50%;
         text-align: center;
         font-size: 35px;
         display: flex;
         align-items: center;
         justify-content: center;
         text-decoration: none;
-        z-index: 10000;
+        position: relative; /* Importante para las ondas detrás */
+        z-index: 2; /* Por encima de las ondas */
         
-        /* Efecto Neón */
-        box-shadow: 0 0 15px rgba(37, 211, 102, 0.7), 
-                    0 0 30px rgba(37, 211, 102, 0.4);
+        /* Efecto Neón Base */
+        box-shadow: 0 0 15px rgba(37, 211, 102, 0.7);
         
-        /* Suavidad de transición */
+        /* Suavidad de transición y animación de bamboleo suave */
         transition: all 0.3s ease-in-out;
-        
-        /* Animación de Bamboleo */
-        animation: wobble-neon 3s infinite ease-in-out;
+        animation: wobble-subtle 4s infinite ease-in-out;
+    }
+
+    /* Las Ondas Orgánicas (Pseudo-elementos) */
+    .whatsapp-pulse-btn::before,
+    .whatsapp-pulse-btn::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(37, 211, 102, 0.5); /* Verde semi-transparente */
+        border-radius: 50%;
+        z-index: 1; /* Detrás del botón principal */
+        opacity: 0;
+        /* Efecto Neón en la onda */
+        box-shadow: 0 0 20px rgba(37, 211, 102, 0.6);
+    }
+
+    /* Primera Onda (Inicio inmediato) */
+    .whatsapp-pulse-btn::before {
+        animation: pulse-organic 2.5s infinite linear;
+    }
+
+    /* Segunda Onda (Retrasada para crear flujo continuo) */
+    .whatsapp-pulse-btn::after {
+        animation: pulse-organic 2.5s infinite linear;
+        animation-delay: 1.25s; /* Mitad de la duración para desfasar */
     }
 
     /* Hover: Intensifica el efecto al pasar el mouse */
-    .whatsapp-float:hover {
-        background-color: #20ba5a;
-        box-shadow: 0 0 25px rgba(37, 211, 102, 1), 
-                    0 0 50px rgba(37, 211, 102, 0.6);
+    .whatsapp-pulse-btn:hover {
         transform: scale(1.1);
+        box-shadow: 0 0 30px rgba(37, 211, 102, 1);
+        background-color: #20ba5a;
         color: #fff !important;
     }
 
-    /* Keyframes para el efecto de bamboleo (Wobble) */
-    @keyframes wobble-neon {
+    /* Keyframes para el Bamboleo Suave (Wobble) - Menos agresivo */
+    @keyframes wobble-subtle {
         0%, 100% { transform: rotate(0deg); }
-        8%, 24% { transform: rotate(-12deg) scale(1.05); }
-        16%, 32% { transform: rotate(12deg) scale(1.05); }
-        40% { transform: rotate(0deg) scale(1); }
+        15% { transform: rotate(-8deg); }
+        30% { transform: rotate(8deg); }
+        45% { transform: rotate(0deg); }
+    }
+
+    /* Keyframes para el Pulso Orgánico (Ripple) */
+    @keyframes pulse-organic {
+        0% {
+            transform: scale(1);
+            opacity: 0;
+        }
+        10% {
+            opacity: 1; /* Aparece rápido al inicio */
+        }
+        80% {
+            opacity: 0.3; /* Se va desvaneciendo suavemente */
+        }
+        100% {
+            transform: scale(2.2); /* Crece más del doble */
+            opacity: 0; /* Desaparece por completo al final */
+        }
     }
 
     /* Ajuste para dispositivos móviles */
     @media (max-width: 768px) {
-        .whatsapp-float {
+        .whatsapp-pulse-wrapper {
             bottom: 20px;
             right: 20px;
             width: 55px;
             height: 55px;
+        }
+        .whatsapp-pulse-btn {
+            width: 55px;
+            height: 55px;
             font-size: 28px;
+        }
+        /* Ajuste de escala de pulso para móvil */
+        @keyframes pulse-organic {
+            0% { transform: scale(1); opacity: 0; }
+            10% { opacity: 1; }
+            100% { transform: scale(1.8); opacity: 0; }
         }
     }
 </style>
 
-<a href="https://wa.me/56977466662?text=Hola%20José!%20Ví%20la%20página%20web%20de%20Salón%20Galaxia%20y%20quiero%20agendar%20una%20hora." 
-   class="whatsapp-float" 
-   target="_blank" 
-   rel="noopener noreferrer"
-   title="Chatea con José López">
-    <i class="socicon-whatsapp socicon"></i>
-</a>  
+<div class="whatsapp-pulse-wrapper">
+    <a href="https://wa.me/56977466662?text=Hola%20José!%20Ví%20la%20página%20web%20de%20Salón%20Galaxia%20y%20quiero%20agendar%20una%20hora." 
+       class="whatsapp-pulse-btn" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       title="Chatea con José López">
+        <i class="socicon-whatsapp socicon"></i>
+    </a>
+</div>
 </body>
 </html>
