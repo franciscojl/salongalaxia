@@ -293,7 +293,87 @@
 		</div>
 	</div>
 </section>
+<section id="pinterest-trends" style="background-color: #030303; padding: 0;">
+    <style>
+        /* Aquí pegué tus variables y estilos para que funcionen localmente en esta sección */
+        :root {
+            --bg-p: #030303;
+            --cyan-p: #00f2ff;
+            --turquoise-p: #00f5a0;
+            --purple-p: #bc13fe;
+            --glass-p: rgba(255, 255, 255, 0.03);
+            --border-p: rgba(255, 255, 255, 0.1);
+        }
+        .trends-wrapper { max-width: 1200px; margin: 0 auto; padding: 80px 20px; text-align: center; }
+        .title-wrapper { margin-bottom: 60px; }
+        .main-title-p { font-size: clamp(2rem, 7vw, 4.5rem); font-weight: 800; text-transform: uppercase; margin: 0; color: #ffffff; }
+        .gradient-text { display: block; background: linear-gradient(90deg, var(--cyan-p), var(--turquoise-p)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .trends-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-bottom: 70px; }
+        .card-p { 
+            text-decoration: none; background: var(--glass-p); border: 1px solid var(--border-p); 
+            border-radius: 28px; padding: 45px 30px; backdrop-filter: blur(15px); transition: all 0.5s ease;
+            display: flex; flex-direction: column; align-items: center;
+        }
+        .card-p:hover { transform: translateY(-15px); border-color: var(--cyan-p); box-shadow: 0 25px 50px -12px rgba(0, 242, 255, 0.2); }
+        .card-icon { font-size: 3rem; margin-bottom: 25px; filter: drop-shadow(0 0 12px var(--purple-p)); }
+        .card-p h3 { color: #fff; text-transform: uppercase; font-size: 1.4rem; }
+        .card-p p { color: #999; font-size: 0.95rem; }
+        .btn-pinterest { 
+            display: inline-flex; align-items: center; gap: 15px; padding: 20px 40px; border-radius: 100px;
+            background: linear-gradient(45deg, var(--purple-p), #7a00ff); color: white !important; 
+            text-decoration: none; font-weight: 700; transition: 0.4s;
+        }
+        @media (max-width: 992px) { .trends-container { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { 
+            .trends-container { display: flex; overflow-x: auto; gap: 20px; padding-bottom: 30px; }
+            .card-p { min-width: 80vw; }
+        }
+    </style>
 
+    <div class="trends-wrapper">
+        <div class="title-wrapper">
+            <h2 class="main-title-p">TENDENCIAS <span class="gradient-text">PARA TI</span></h2>
+        </div>
+
+        <div class="trends-container">
+            <a href="https://cl.pinterest.com/search/pins/?q=cyber%20bob%20haircut" target="_blank" class="card-p">
+                <div class="card-icon">🛸</div>
+                <h3>Cyber-Bobs</h3>
+                <p>Cortes asimétricos y ultra-lisos con precisión cibernética.</p>
+            </a>
+            <a href="https://cl.pinterest.com/search/pins/?q=deep%20violet%20hair%20color" target="_blank" class="card-p">
+                <div class="card-icon">🪐</div>
+                <h3>Deep Violet</h3>
+                <p>La profundidad del espacio capturada en reflejos purpúreos.</p>
+            </a>
+            <a href="https://cl.pinterest.com/search/pins/?q=stellar%20white%20blonde%20hair" target="_blank" class="card-p">
+                <div class="card-icon">☄️</div>
+                <h3>Stellar Blonde</h3>
+                <p>Rubios nórdicos casi blancos con brillo de supernova.</p>
+            </a>
+            <a href="https://cl.pinterest.com/search/pins/?q=neon%20colored%20pixie%20cut" target="_blank" class="card-p">
+                <div class="card-icon">⚡</div>
+                <h3>Neon Pixie</h3>
+                <p>Cortes pixie audaces con acentos en colores neón fantasía.</p>
+            </a>
+            <a href="https://cl.pinterest.com/search/pins/?q=glass%20hair%20trend" target="_blank" class="card-p">
+                <div class="card-icon">💎</div>
+                <h3>Glass Hair</h3>
+                <p>Efecto seda y brillo extremo para un cabello impecable.</p>
+            </a>
+            <a href="https://cl.pinterest.com/search/pins/?q=galactic%20blue%20waves%20hair" target="_blank" class="card-p">
+                <div class="card-icon">🌀</div>
+                <h3>Galactic Waves</h3>
+                <p>Ondas profundas con transiciones turquesas y aguamarina.</p>
+            </a>
+        </div>
+
+        <a href="https://cl.pinterest.com/search/pins/?q=hair%20trends&rs=typed" target="_blank" class="btn-pinterest">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.091.377-.293 1.189-.332 1.343-.052.203-.173.246-.399.141-1.488-.693-2.418-2.871-2.418-4.62 0-3.762 2.733-7.215 7.876-7.215 4.135 0 7.348 2.946 7.348 6.885 0 4.108-2.59 7.415-6.185 7.415-1.208 0-2.343-.627-2.732-1.369l-.744 2.83c-.269 1.026-1.001 2.313-1.492 3.111 1.125.347 2.314.535 3.548.535 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/></svg>
+            EXPLORAR MÁS EN PINTEREST
+        </a>
+    </div>
+</section>
 <section data-bs-version="5.1" class="contacts01 cid-vd0ok5XapE mbr-parallax-background" id="contacts01-11">
     
 
