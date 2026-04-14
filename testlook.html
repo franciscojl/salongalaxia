@@ -88,7 +88,7 @@
 		</div>
 	</div>
 </section>
-<section id="premium-test-look" style="background-color: #000; position: relative; min-height: 90vh; display: flex; align-items: center; overflow: hidden; z-index: 1;">
+<section id="premium-test-look" style="background-color: #000; position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; z-index: 1;">
     
     <div id="container-bg-premium" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;">
         <div class="bg-sphere-p sphere-1-p" id="sphere1"></div>
@@ -100,28 +100,21 @@
             --cian-neon: #00f2ff;
             --glass-bg: rgba(255, 255, 255, 0.03);
             --glass-border: rgba(255, 255, 255, 0.1);
+            --text-p: rgba(255, 255, 255, 0.9);
         }
 
-        /* Esferas con desenfoque profundo */
+        /* Esferas con desenfoque */
         .bg-sphere-p {
-            position: absolute; 
-            border-radius: 50%; 
-            background: var(--cian-neon);
-            filter: blur(100px); 
-            opacity: 0.25; 
-            will-change: transform;
-            pointer-events: none;
+            position: absolute; border-radius: 50%; background: var(--cian-neon);
+            filter: blur(100px); opacity: 0.25; will-change: transform; pointer-events: none;
         }
-        .sphere-1-p { width: 350px; height: 350px; top: 15%; left: 10%; }
-        .sphere-2-p { width: 400px; height: 400px; bottom: 15%; right: 10%; }
+        .sphere-1-p { width: 350px; height: 350px; top: 10%; left: 10%; }
+        .sphere-2-p { width: 400px; height: 400px; bottom: 10%; right: 10%; }
 
         /* Esporas */
         .spore-p {
-            position: absolute; 
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50%; 
-            animation: floatSporePremium linear infinite;
-            pointer-events: none;
+            position: absolute; background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%; animation: floatSporePremium linear infinite; pointer-events: none;
         }
 
         @keyframes floatSporePremium {
@@ -131,155 +124,227 @@
             100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
         }
 
-        /* Contenedor del Quiz */
+        /* Contenedor Quiz */
         #quiz-wrapper-premium {
-            position: relative; 
-            z-index: 10; 
-            width: 100%; 
-            max-width: 500px;
-            margin: 80px auto; 
-            padding: 40px 30px;
-            background: var(--glass-bg); 
-            backdrop-filter: blur(25px); 
-            -webkit-backdrop-filter: blur(25px);
-            border: 1px solid var(--glass-border); 
-            border-radius: 30px;
-            text-align: center; 
-            color: white;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            position: relative; z-index: 10; width: 90%; max-width: 500px;
+            margin: 60px auto; padding: 45px 30px;
+            background: var(--glass-bg); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
+            border: 1px solid var(--glass-border); border-radius: 30px;
+            text-align: center; color: white; box-shadow: 0 25px 60px rgba(0,0,0,0.6);
         }
 
         .question-p { display: none; opacity: 0; }
-        .question-p.active { display: block; animation: fadeInStep 0.8s ease forwards; }
+        .question-p.active { display: block; animation: fadeInQuizStep 0.7s ease forwards; }
 
-        .options-grid-p { display: grid; gap: 12px; margin-top: 30px; }
+        .options-grid-p { display: grid; gap: 12px; margin-top: 25px; }
 
         button.option-p {
-            background: transparent; 
-            border: 1px solid rgba(255,255,255,0.15);
-            color: rgba(255,255,255,0.85); 
-            padding: 16px 20px; 
-            border-radius: 12px;
-            cursor: pointer; 
-            transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
-            text-align: left; 
-            width: 100%;
+            background: transparent; border: 1px solid rgba(255,255,255,0.15);
+            color: var(--text-p); padding: 16px; border-radius: 12px;
+            cursor: pointer; transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            text-align: left; width: 100%; font-size: 0.95rem;
         }
 
-        button.option-p:hover { 
-            background: white; 
-            color: black; 
-            border-color: white; 
-            transform: translateX(8px); 
+        button.option-p:hover { background: white; color: black; border-color: white; transform: translateX(8px); }
+
+        .progress-bar-p { height: 2px; background: rgba(255,255,255,0.1); margin-bottom: 35px; }
+        .progress-fill-p { height: 100%; background: var(--cian-neon); width: 0%; transition: width 0.5s ease; }
+
+        .btn-cta-p {
+            display: inline-block; padding: 16px 40px; background: white; color: black !important;
+            text-decoration: none; border-radius: 4px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 2px; width: 100%; margin-top: 15px;
+            transition: 0.3s;
         }
+        .btn-cta-p:hover { background: var(--cian-neon); box-shadow: 0 0 20px rgba(0,242,255,0.4); }
 
-        .progress-bar-p { height: 2px; background: rgba(255,255,255,0.1); margin-bottom: 40px; }
-        .progress-fill-p { height: 100%; background: var(--cian-neon); width: 0%; transition: width 0.6s ease; }
-
-        .btn-main-p {
-            display: inline-block; padding: 15px 40px; background: white; color: black !important;
-            text-decoration: none; border-radius: 4px; font-weight: 600;
-            text-transform: uppercase; letter-spacing: 2px; width: 100%; margin-top: 20px;
-        }
-
-        @keyframes fadeInStep { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInQuizStep { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 
     <div id="quiz-wrapper-premium">
-        <div class="progress-bar-p"><div class="progress-fill-p" id="progress-bar"></div></div>
+        <div class="progress-bar-p"><div class="progress-fill-p" id="progress-bar-fill"></div></div>
         
         <div id="intro-p">
-            <h1 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 10px;">¿Cuál es tu próximo look?</h1>
-            <p style="font-weight: 300; opacity: 0.6; margin-bottom: 35px;">Descubre el estilo que mejor va con tu energía.</p>
-            <button class="btn-main-p" onclick="startPremiumQuiz()">Comenzar Test</button>
+            <h1 style="font-family: serif; font-size: 2rem; margin-bottom: 15px;">Test de Estilo Galáctico</h1>
+            <p style="opacity: 0.6; margin-bottom: 30px;">Descubre el servicio ideal para potenciar tu look.</p>
+            <button class="btn-cta-p" onclick="startPremiumQuiz()">Comenzar Test</button>
         </div>
 
         <div id="q1" class="question-p">
-            <h3>1. ¿Qué quieres lograr?</h3>
+            <h3>1. ¿Qué buscas lograr hoy?</h3>
             <div class="options-grid-p">
-                <button class="option-p" onclick="handleNext('A')">Aclarar mi cabello / Luz</button>
-                <button class="option-p" onclick="handleNext('B')">Recuperar suavidad / Brillo</button>
-                <button class="option-p" onclick="handleNext('C')">Cubrir canas / Retoque</button>
-                <button class="option-p" onclick="handleNext('D')">Cambio total de color</button>
-                <button class="option-p" onclick="handleNext('E')">Corte sano y natural</button>
+                <button class="option-p" onclick="handleNext('A')">Dar luz y brillo (mechas/balayage)</button>
+                <button class="option-p" onclick="handleNext('B')">Recuperar suavidad y reparar daño</button>
+                <button class="option-p" onclick="handleNext('C')">Cubrir canas o retocar mi color</button>
+                <button class="option-p" onclick="handleNext('D')">Un cambio de color radical</button>
+                <button class="option-p" onclick="handleNext('E')">Solo un corte y salud natural</button>
+            </div>
+        </div>
+
+        <div id="q2" class="question-p">
+            <h3>2. ¿Cómo está tu historial químico?</h3>
+            <div class="options-grid-p">
+                <button class="option-p" onclick="handleNext('A')">Tengo mechas o balayage antiguo</button>
+                <button class="option-p" onclick="handleNext('B')">Se siente débil o quebradizo</button>
+                <button class="option-p" onclick="handleNext('C')">Me tiño la raíz todos los meses</button>
+                <button class="option-p" onclick="handleNext('D')">Tengo un color muy oscuro hoy</button>
+                <button class="option-p" onclick="handleNext('E')">Mi cabello está virgen o natural</button>
+            </div>
+        </div>
+
+        <div id="q3" class="question-p">
+            <h3>3. ¿Cuál es tu mayor deseo?</h3>
+            <div class="options-grid-p">
+                <button class="option-p" onclick="handleNext('A')">Ser más rubia / Luminosa</button>
+                <button class="option-p" onclick="handleNext('B')">Que brille y se sienta sedoso</button>
+                <button class="option-p" onclick="handleNext('C')">Color perfecto y parejo</button>
+                <button class="option-p" onclick="handleNext('D')">Aburrida de mi look, quiero otro</button>
+                <button class="option-p" onclick="handleNext('E')">Forma nueva y fácil de peinar</button>
+            </div>
+        </div>
+
+        <div id="q4" class="question-p">
+            <h3>4. ¿Última visita técnica?</h3>
+            <div class="options-grid-p">
+                <button class="option-p" onclick="handleNext('A')">Hace menos de 3 meses</button>
+                <button class="option-p" onclick="handleNext('B')">Hace poco y quedó maltratado</button>
+                <button class="option-p" onclick="handleNext('C')">Voy sagradamente cada mes</button>
+                <button class="option-p" onclick="handleNext('D')">Hace mucho tiempo</button>
+                <button class="option-p" onclick="handleNext('E')">Hace más de un año</button>
+            </div>
+        </div>
+
+        <div id="q5" class="question-p">
+            <h3>5. ¿Qué largo tienes?</h3>
+            <div class="options-grid-p">
+                <button class="option-p" onclick="handleNext('A')">Corto (sobre hombros)</button>
+                <button class="option-p" onclick="handleNext('B')">Medio (a los hombros)</button>
+                <button class="option-p" onclick="handleNext('C')">Largo (media espalda)</button>
+                <button class="option-p" onclick="handleNext('D')">Extra largo</button>
+                <button class="option-p" onclick="handleNext('E')">Muy corto / Pixie</button>
+            </div>
+        </div>
+
+        <div id="q6" class="question-p">
+            <h3>6. ¿Mantenimiento deseado?</h3>
+            <div class="options-grid-p">
+                <button class="option-p" onclick="handleNext('A')">Vendré seguido por mis mechas</button>
+                <button class="option-p" onclick="handleNext('B')">Solo buenos productos en casa</button>
+                <button class="option-p" onclick="handleNext('C')">Necesito cubrir canas siempre</button>
+                <button class="option-p" onclick="handleNext('D')">No me importa si el cambio es top</button>
+                <button class="option-p" onclick="handleNext('E')">Lo más sencillo y natural posible</button>
+            </div>
+        </div>
+
+        <div id="q7" class="question-p">
+            <h3>7. ¿Qué es lo que más te molesta?</h3>
+            <div class="options-grid-p">
+                <button class="option-p" onclick="handleNext('A')">Se ve oscuro o apagado</button>
+                <button class="option-p" onclick="handleNext('B')">El frizz y la aspereza</button>
+                <button class="option-p" onclick="handleNext('C')">Las raíces y canas visibles</button>
+                <button class="option-p" onclick="handleNext('D')">El color ya no me representa</button>
+                <button class="option-p" onclick="handleNext('E')">Puntas feas y sin forma</button>
             </div>
         </div>
 
         <div id="result-p" style="display:none;">
-            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem;">Tu perfil ideal:</p>
-            <h2 id="res-title-p" style="color: var(--cian-neon); font-family: 'Playfair Display', serif;" class="display-5"></h2>
-            <p id="res-desc-p" style="opacity: 0.7; margin: 20px 0; font-size: 0.9rem; line-height: 1.6;"></p>
-            <a id="wa-link-p" href="#" target="_blank" class="btn-main-p">Reservar Cita</a>
-            <button onclick="location.reload()" style="background:none; border:none; color:rgba(255,255,255,0.4); margin-top:20px; cursor:pointer; font-size: 0.8rem;">← REPETIR TEST</button>
+            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem;">Resultado:</p>
+            <h2 id="res-title-p" style="color: var(--cian-neon); font-family: serif; font-size: 2rem;"></h2>
+            <p id="res-desc-p" style="opacity: 0.7; margin: 20px 0; font-size: 0.95rem; line-height: 1.6;"></p>
+            <a id="wa-link-p" href="#" target="_blank" class="btn-cta-p">Agendar Evaluación</a>
+            <button onclick="location.reload()" style="background:none; border:none; color:rgba(255,255,255,0.4); margin-top:25px; cursor:pointer; font-size: 0.8rem; letter-spacing: 1px;">← REPETIR EL TEST</button>
         </div>
     </div>
 
     <script>
-        // 1. GENERAR ESPORAS
-        const bgP = document.getElementById('container-bg-premium');
-        function createSpores() {
-            for (let i = 0; i < 30; i++) {
+        // 1. ESPORAS DINÁMICAS
+        const bgContainer = document.getElementById('container-bg-premium');
+        function initSpores() {
+            for (let i = 0; i < 35; i++) {
                 let s = document.createElement('div');
                 s.className = 'spore-p';
                 let size = Math.random() * 3 + 1;
                 s.style.width = size + 'px';
                 s.style.height = size + 'px';
                 s.style.left = Math.random() * 100 + 'vw';
-                s.style.animationDuration = (Math.random() * 10 + 5) + 's';
+                s.style.animationDuration = (Math.random() * 12 + 6) + 's';
                 s.style.animationDelay = (Math.random() * 10) + 's';
-                bgP.appendChild(s);
+                bgContainer.appendChild(s);
             }
         }
-        createSpores();
+        initSpores();
 
-        // 2. INTERACTIVIDAD MOUSE (CORREGIDA)
-        const s1 = document.getElementById('sphere1');
-        const s2 = document.getElementById('sphere2');
+        // 2. INTERACTIVIDAD MOUSE (RESTAURADA)
+        const sph1 = document.getElementById('sphere1');
+        const sph2 = document.getElementById('sphere2');
 
         window.addEventListener('mousemove', (e) => {
-            const x = (e.clientX - window.innerWidth / 2) * 0.015;
-            const y = (e.clientY - window.innerHeight / 2) * 0.015;
-            s1.style.transform = `translate(${-x * 2}px, ${-y * 2}px)`;
-            s2.style.transform = `translate(${x * 2}px, ${y * 2}px)`;
+            const moveX = (e.clientX - window.innerWidth / 2) * 0.02;
+            const moveY = (e.clientY - window.innerHeight / 2) * 0.02;
+            sph1.style.transform = `translate(${-moveX * 1.5}px, ${-moveY * 1.5}px)`;
+            sph2.style.transform = `translate(${moveX * 1.5}px, ${moveY * 1.5}px)`;
         });
 
         // 3. LÓGICA DEL TEST
-        let currentS = 0;
-        let pScores = { A:0, B:0, C:0, D:0, E:0 };
+        let step = 0;
+        let scores = { A:0, B:0, C:0, D:0, E:0 };
 
         function startPremiumQuiz() {
             document.getElementById('intro-p').style.display = 'none';
-            showQuestion(1);
+            showStep(1);
         }
 
-        function showQuestion(n) {
+        function showStep(n) {
             document.querySelectorAll('.question-p').forEach(q => q.classList.remove('active'));
             document.getElementById('q' + n).classList.add('active');
-            document.getElementById('progress-bar').style.width = ((n-1)/7 * 100) + '%';
+            document.getElementById('progress-bar-fill').style.width = ((n - 1) / 7 * 100) + '%';
         }
 
         function handleNext(ans) {
-            pScores[ans]++;
-            currentS++;
-            if (currentS < 1) { // Aquí puse 1 por el ejemplo, pero tú usa 7
-                showQuestion(currentS + 1);
+            scores[ans]++;
+            step++;
+            if (step < 7) {
+                showStep(step + 1);
             } else {
-                showResult();
+                renderResult();
             }
         }
 
-        function showResult() {
+        function renderResult() {
             document.querySelectorAll('.question-p').forEach(q => q.classList.remove('active'));
-            document.getElementById('progress-bar').style.width = '100%';
-            const win = Object.keys(pScores).reduce((a, b) => pScores[a] > pScores[b] ? a : b);
+            document.getElementById('progress-bar-fill').style.width = '100%';
             
-            // ... (Tus textos de resultados iguales a tu código original) ...
-            let title = "Rubio e Iluminación"; 
+            const winner = Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
+            let title = "", desc = "", waText = "";
+
+            if(winner == 'A'){
+                title = "Rubio e Iluminación";
+                desc = "Tu energía pide luz. Eres la candidata ideal para un Balayage Galáctico o mechas de alta definición.";
+                waText = "¡Hola José! Hice el Test y mi resultado es Rubio e Iluminación. Quiero agendar una cita.";
+            } else if(winner == 'B'){
+                title = "Brillo y Reparación";
+                desc = "Tu cabello necesita un rescate. Recomendamos un sellado nutritivo o bótox capilar profundo.";
+                waText = "¡Hola José! Mi resultado fue Brillo y Reparación. Necesito sanar mi cabello, ¿me ayudas?";
+            } else if(winner == 'C'){
+                title = "Color y Cobertura";
+                desc = "Buscas perfección constante. Tu match es un retoque de color global con cobertura premium de canas.";
+                waText = "¡Hola José! Mi resultado es Color y Cobertura. Quiero retocar mi color y canas.";
+            } else if(winner == 'D'){
+                title = "Cambio Total";
+                desc = "Estás lista para una metamorfosis. Es momento de un cambio de tono radical y vanguardista.";
+                waText = "¡Hola José! Estoy lista para un Cambio Total según el Test. ¿Cuándo evaluamos?";
+            } else {
+                title = "Natural y Corte";
+                desc = "Menos es más. Un corte de autor y tratamiento de hidratación simple es lo que necesitas hoy.";
+                waText = "¡Hola José! Busco algo Natural y un buen Corte según el Test. ¿Tienes horas?";
+            }
+
             document.getElementById('res-title-p').innerText = title;
+            document.getElementById('res-desc-p').innerText = desc;
+            document.getElementById('wa-link-p').href = "https://wa.me/56977466662?text=" + encodeURIComponent(waText);
             document.getElementById('result-p').style.display = 'block';
         }
     </script>
-</section>
 </section>
 <section data-bs-version="5.1" class="contacts01 cid-vduLna0fvo mbr-parallax-background" id="contacts01-28">
     
