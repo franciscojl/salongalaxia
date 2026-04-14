@@ -88,7 +88,188 @@
 		</div>
 	</div>
 </section>
+<section id="premium-test-look" style="background-color: #000; position: relative; min-height: 80vh; display: flex; align-items: center; overflow: hidden;">
+    
+    <div id="container-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+        <div class="bg-sphere sphere-1" id="sphere1"></div>
+        <div class="bg-sphere sphere-2" id="sphere2"></div>
+    </div>
 
+    <style>
+        /* Variables y Estilos Propios para evitar conflictos */
+        :root {
+            --cian-neon: #00f2ff;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        .bg-sphere {
+            position: absolute; border-radius: 50%; background: var(--cian-neon);
+            filter: blur(100px); opacity: 0.2; transition: transform 0.2s ease-out;
+        }
+        .sphere-1 { width: 300px; height: 300px; top: 10%; left: 10%; }
+        .sphere-2 { width: 350px; height: 350px; bottom: 10%; right: 10%; }
+
+        .spore {
+            position: absolute; background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%; animation: floatSpore linear infinite;
+        }
+
+        @keyframes floatSpore {
+            0% { transform: translateY(100vh) scale(0); opacity: 0; }
+            100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+        }
+
+        #quiz-wrapper {
+            position: relative; z-index: 10; width: 100%; max-width: 550px;
+            margin: 60px auto; padding: 40px 30px;
+            background: var(--glass-bg); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
+            border: 1px solid var(--glass-border); border-radius: 30px;
+            text-align: center; color: white;
+        }
+
+        .question { display: none; }
+        .question.active { display: block; animation: fadeInQuiz 0.6s ease forwards; }
+
+        .options-grid { display: grid; gap: 12px; margin-top: 25px; }
+
+        button.option {
+            background: transparent; border: 1px solid rgba(255,255,255,0.15);
+            color: rgba(255,255,255,0.9); padding: 15px; border-radius: 12px;
+            cursor: pointer; transition: 0.3s; text-align: left; width: 100%;
+        }
+
+        button.option:hover { 
+            background: white; color: black; transform: translateX(8px); 
+        }
+
+        .progress-bar-quiz { height: 3px; background: rgba(255,255,255,0.1); margin-bottom: 30px; }
+        .progress-fill-quiz { height: 100%; background: var(--cian-neon); width: 0%; transition: 0.4s; }
+
+        .btn-whatsapp-reserva {
+            display: block; padding: 18px; background: white; color: black !important;
+            text-decoration: none; border-radius: 8px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 1px; margin-top: 20px;
+        }
+
+        @keyframes fadeInQuiz { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+
+    <div id="quiz-wrapper">
+        <div class="progress-bar-quiz"><div class="progress-fill-quiz" id="progress"></div></div>
+        
+        <div id="intro-quiz">
+            <h2 class="display-5 mb-3" style="font-family: serif;">¿Cuál es tu próximo look?</h2>
+            <p style="opacity: 0.7; margin-bottom: 30px;">Descubre el estilo que mejor va con tu energía.</p>
+            <button class="btn-whatsapp-reserva" onclick="startPremiumQuiz()">Comenzar Test</button>
+        </div>
+
+        <div id="q1" class="question">
+            <h3>1. ¿Qué buscas lograr?</h3>
+            <div class="options-grid">
+                <button class="option" onclick="nextPremiumQ('A')">Aclarar mi cabello / Puntos de luz</button>
+                <button class="option" onclick="nextPremiumQ('B')">Recuperar suavidad / Reparar daño</button>
+                <button class="option" onclick="nextPremiumQ('C')">Cubrir canas / Retocar color</button>
+                <button class="option" onclick="nextPremiumQ('D')">Cambio total de color</button>
+                <button class="option" onclick="nextPremiumQ('E')">Solo un buen corte natural</button>
+            </div>
+        </div>
+
+        <div id="q2" class="question">
+            <h3>2. ¿Tu historial químico?</h3>
+            <div class="options-grid">
+                <button class="option" onclick="nextPremiumQ('A')">Mechas o balayage antiguo</button>
+                <button class="option" onclick="nextPremiumQ('B')">Quebradizo o puntas partidas</button>
+                <button class="option" onclick="nextPremiumQ('C')">Color global mensual</button>
+                <button class="option" onclick="nextPremiumQ('D')">Teñido muy oscuro</button>
+                <button class="option" onclick="nextPremiumQ('E')">Cabello natural / Virgen</button>
+            </div>
+        </div>
+
+        <div id="q3" class="question">
+            <h3>3. ¿Tu mayor deseo?</h3>
+            <div class="options-grid">
+                <button class="option" onclick="nextPremiumQ('A')">Ser más rubia / Luminosa</button>
+                <button class="option" onclick="nextPremiumQ('B')">Brillo y sedosidad total</button>
+                <button class="option" onclick="nextPremiumQ('C')">Color parejo sin canas</button>
+                <button class="option" onclick="nextPremiumQ('D')">Cambio radical de look</button>
+                <button class="option" onclick="nextPremiumQ('E')">Corte fácil de peinar</button>
+            </div>
+        </div>
+
+        <div id="result-quiz" style="display:none;">
+            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem;">Tu perfil ideal:</p>
+            <h2 id="res-title" style="color: var(--cian-neon); font-family: serif;" class="display-5"></h2>
+            <p id="res-desc" style="opacity: 0.7; margin: 20px 0;"></p>
+            <a id="wa-final-link" href="#" target="_blank" class="btn-whatsapp-reserva">Reservar mi cita</a>
+            <button onclick="location.reload()" style="background:none; border:none; color:gray; margin-top:20px; cursor:pointer;">← Repetir</button>
+        </div>
+    </div>
+
+    <script>
+        // Lógica de esporas para la sección
+        const bg = document.getElementById('container-bg');
+        for (let i = 0; i < 20; i++) {
+            let s = document.createElement('div');
+            s.className = 'spore';
+            s.style.width = s.style.height = (Math.random() * 3 + 1) + 'px';
+            s.style.left = Math.random() * 100 + '%';
+            s.style.animationDuration = (Math.random() * 8 + 4) + 's';
+            s.style.animationDelay = Math.random() * 5 + 's';
+            bg.appendChild(s);
+        }
+
+        let step = 0;
+        let pScores = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+
+        function startPremiumQuiz() {
+            document.getElementById('intro-quiz').style.display = 'none';
+            showStep(1);
+        }
+
+        function showStep(n) {
+            document.querySelectorAll('.question').forEach(q => q.classList.remove('active'));
+            document.getElementById('q' + n).classList.add('active');
+            document.getElementById('progress').style.width = ((n-1)/3 * 100) + '%';
+        }
+
+        function nextPremiumQ(ans) {
+            pScores[ans]++;
+            step++;
+            if (step < 3) {
+                showStep(step + 1);
+            } else {
+                finishQuiz();
+            }
+        }
+
+        function finishQuiz() {
+            document.querySelectorAll('.question').forEach(q => q.classList.remove('active'));
+            document.getElementById('progress').style.width = '100%';
+            const win = Object.keys(pScores).reduce((a, b) => pScores[a] > pScores[b] ? a : b);
+            
+            let t = "", d = "", msg = "";
+            if(win=='A'){ t="Rubio e Iluminación"; d="Buscas dar luz. Ideal para mechas o balayage."; msg="Mi resultado es Rubio e Iluminación."; }
+            else if(win=='B'){ t="Brillo y Reparación"; d="Necesitas hidratación profunda."; msg="Mi resultado es Brillo y Reparación."; }
+            else if(win=='C'){ t="Color y Cobertura"; d="Para raíces impecables y canas."; msg="Mi resultado es Color y Cobertura."; }
+            else if(win=='D'){ t="Cambio Total"; d="Lista para una transformación radical."; msg="Mi resultado es Cambio Total."; }
+            else { t="Natural y Corte"; d="Frescura sin químicos invasivos."; msg="Mi resultado es Natural y Corte."; }
+
+            document.getElementById('res-title').innerText = t;
+            document.getElementById('res-desc').innerText = d;
+            document.getElementById('wa-final-link').href = `https://wa.me/56977466662?text=Hola José, hice el test y mi resultado es: ${t}. ${msg}`;
+            document.getElementById('result-quiz').style.display = 'block';
+        }
+
+        // Parallax suave
+        document.addEventListener('mousemove', (e) => {
+            const x = (e.clientX - window.innerWidth / 2) * 0.01;
+            const y = (e.clientY - window.innerHeight / 2) * 0.01;
+            document.getElementById('sphere1').style.transform = `translate(${-x}px, ${-y}px)`;
+            document.getElementById('sphere2').style.transform = `translate(${x}px, ${y}px)`;
+        });
+    </script>
+</section>
 <section data-bs-version="5.1" class="contacts01 cid-vduLna0fvo mbr-parallax-background" id="contacts01-28">
     
 
