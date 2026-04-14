@@ -249,7 +249,7 @@
                 </div>
                 <div id="cuts-hombre" class="options-flex">
                     <button class="chip" onclick="selChip(this)">Undercut</button>
-                    <button class="chip" onclick="selChip(this)">Pompadour</button>
+                    <button class="chip" onclick="selChip(this)">Pompadour moderno</button>
                     <button class="chip" onclick="selChip(this)">Fade degradado</button>
                     <button class="chip" onclick="selChip(this)">Mullet moderno</button>
                     <button class="chip" onclick="selChip(this)">Top Knot</button>
@@ -359,7 +359,7 @@
             const sex = document.querySelector('#group-sex .chip.active')?.innerText || "persona";
             const col = document.querySelector('#group-color .chip.active')?.innerText || "natural";
             const cut = document.querySelector('.active-gender .chip.active')?.innerText || "moderno";
-            const p = `Soy cliente de Salón Galaxia. Analiza mi foto y haz una edición fotorrealista: soy ${sex}, cambia mi cabello a color ${col} con un corte estilo ${cut}. Mantén mi rostro idéntico, solo cambia el pelo con luz de salón.`;
+            const p = `Soy cliente de Salón Galaxia. Analiza mi foto y haz una edición fotorrealista: soy ${sex}, cambia mi cabello a color ${col} con un corte estilo ${cut}. Mantén mi rostro idéntico, no cambies mis rasgos, solo cambia el pelo, iluminación con luz de salón profesional.`;
             
             navigator.clipboard.writeText(p).then(() => {
                 document.getElementById('p-text').innerText = "✓ COPIADO: " + p;
