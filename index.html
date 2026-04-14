@@ -82,32 +82,37 @@
 		<div class="row">
 			<div class="content-wrap col-12 col-md-7">
 <style>
-    .titulo-galactico {
-        display: inline-block;
-        /* Degradado Violeta -> Cian -> Violeta (el tercer color hace que el bucle sea infinito y suave) */
-        background: linear-gradient(90deg, #8a2be2, #00ffff, #8a2be2) !important;
-        background-size: 200% auto !important;
+    /* Usamos un selector más específico para que Mobirise no lo ignore */
+    h1.display-1 strong.titulo-galactico {
+        display: block !important;
+        width: 100% !important;
+        /* El degradado debe ser largo para que se note el movimiento */
+        background-image: linear-gradient(90deg, #8a2be2, #00ffff, #8a2be2, #00ffff) !important;
+        background-size: 300% 100% !important;
+        
+        /* Recorte de texto */
+        background-clip: text !important;
         -webkit-background-clip: text !important;
+        
+        /* Color transparente para ver el fondo */
+        color: transparent !important;
         -webkit-text-fill-color: transparent !important;
+        
         font-weight: 800 !important;
-        /* Controla la velocidad aquí: 6s es un movimiento elegante */
-        animation: recorrido-color 2s linear infinite !important;
-        text-align: center;
+        
+        /* Animación forzada */
+        animation: moverDegradado 8s linear infinite !important;
     }
 
-    @keyframes recorrido-color {
-        0% {
-            background-position: 20% center;
-        }
-        50% {
-            background-position: 200% center;
-        }
+    @keyframes moverDegradado {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
     }
 </style>
 
 <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1">
     <strong class="titulo-galactico">Elevamos tu look a las estrellas</strong>
-</h1>				
+</h1>			
 				<p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7">
 					Tu Salón de belleza y Peluquería en Santiago Centro</p>
 				<div class="mbr-section-btn"><a class="btn btn-warning display-7" href="testlook.html">Haz el test, descubre tu look</a> <a class="btn btn-primary display-7" href="index.html#article05-f">Alisado Bio Ionic</a> <a class="btn btn-warning-outline display-7" href="index.html#tabs1-7">Servicios</a></div>
