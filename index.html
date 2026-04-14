@@ -82,45 +82,31 @@
 		<div class="row">
 			<div class="content-wrap col-12 col-md-7">
 <style>
-    .display-1 {
+    .titulo-galactico {
         display: inline-block;
-        /* Degradado Cian a Violeta */
-        background: linear-gradient(90deg, #00ffff, #8a2be2, #00ffff) !important;
+        /* Degradado Violeta -> Cian -> Violeta (el tercer color hace que el bucle sea infinito y suave) */
+        background: linear-gradient(90deg, #8a2be2, #00ffff, #8a2be2) !important;
         background-size: 200% auto !important;
         -webkit-background-clip: text !important;
         -webkit-text-fill-color: transparent !important;
         font-weight: 800 !important;
-        animation: flow-galaxia 5s linear infinite !important;
+        /* Controla la velocidad aquí: 6s es un movimiento elegante */
+        animation: recorrido-color 6s linear infinite !important;
+        text-align: center;
     }
 
-    .stars-effect {
-        display: inline-block;
-        position: relative;
-        -webkit-text-fill-color: transparent !important;
-        /* Brillo de neón */
-        text-shadow: 0 0 15px rgba(0, 255, 255, 0.6), 0 0 30px rgba(138, 43, 226, 0.4);
-        animation: twinkle 2s ease-in-out infinite !important;
-    }
-
-    @keyframes flow-galaxia {
-        0% { background-position: 0% center; }
-        100% { background-position: 200% center; }
-    }
-
-    @keyframes twinkle {
-        0%, 100% { 
-            filter: brightness(1);
-            transform: scale(1);
+    @keyframes recorrido-color {
+        0% {
+            background-position: 0% center;
         }
-        50% { 
-            filter: brightness(1.6) drop-shadow(0 0 10px #ffffff);
-            transform: scale(1.05);
+        100% {
+            background-position: 200% center;
         }
     }
 </style>
 
 <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1">
-    <strong>Elevamos tu look a las <span class="stars-effect">estrellas</span></strong>
+    <strong class="titulo-galactico">Elevamos tu look a las estrellas</strong>
 </h1>				
 				<p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7">
 					Tu Salón de belleza y Peluquería en Santiago Centro</p>
